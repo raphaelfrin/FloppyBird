@@ -40,8 +40,11 @@ score = 0
 
 font = pygame.font.SysFont(None, 35)
 
+bird=pygame.image.load("bird.png")
+birdlow=pygame.transform.scale(bird,(bird_width, bird_height))
+
 def draw_bird(x, y):
-    pygame.draw.rect(window, blue, [x, y, bird_width, bird_height])
+    window.blit(birdlow, [x, y, bird_width, bird_height])
 
 def draw_pipe(x, height):
     pygame.draw.rect(window, green, [x, 0, pipe_width, height])
